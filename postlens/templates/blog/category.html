@@ -1,0 +1,63 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}UnityLens | Category page{% endblock %}
+
+{% block nav %}
+{% include 'partials/nav.html' %}
+{% endblock %}
+
+{% block content %}
+<!--Technology Section-->
+<section class="">
+    <div class="container my-5 py-5">
+        <h1>{{ cats }}</h1>
+        <hr class="custom-hr border-4 opacity-100">
+    </div>
+</section>
+    {% if category_posts %}
+        <section class="mb-5 pb-5">
+            <div class="container mb-5 pb-2">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 post-card">
+                    {% for post in category_posts %}
+                    <a href="{% url 'blog-post-detail' post.id %}">
+                        <div class="col">
+                            <div class="post-card card shadow p-2 m-2">
+                                {% if post.thumbnail %}
+                                    <img src="{{ post.thumbnail }}" alt="..." class="no_border post-image card-img-top ">
+                                {% else %}
+                                    {% if post.image %}
+                                        <img src="{{ post.image.url }}" alt="..." class="no_border post-image card-img-top">
+                                    {% endif %}
+                                {% endif %}
+                                <div class="card-body">
+                                    <strong class="d-inline-block">{{ post.category }}</strong>
+                                    <h3 class="card-title">{{ post.title }}</h3>
+                                    {% if post.date_created|date:"Y" != now|date:"Y" %}
+                                        <small>{{ post.date_created|date:"b j, Y"|upper }}</small>
+                                    {% else %}
+                                        <small>{{ post.date_created|date:"b j"|upper }}</small>
+                                    {% endif %}
+                                    <p class="card-text text-justify">{{ post.intro }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+    {% else %}
+            <div class="container">
+                <h3>Sorry this category doesn't exist yet...</h3>
+            </div>
+            
+    {% endif %}
+</section>
+{% endblock %}
+
+{% block newsletter %}
+{% include 'partials/newsletter.html' %}
+{% endblock %}
+
+{% block footer %}
+{% include 'partials/footer.html' %}
+{% endblock %}
