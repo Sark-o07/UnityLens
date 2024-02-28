@@ -4,9 +4,9 @@
 
 UnityLens is a platform dedicated to promoting cultural exchange and understanding through storytelling. It provides a space for individuals from diverse backgrounds to share their cultural experiences, traditions, and perspectives with a global audience. By fostering connections and promoting dialogue, UnityLens aims to create a more inclusive and interconnected world.
 
-- **Deployed Site:** [UnityLens](https://unitylens.site) (Link to your deployed site)
-- **Final Project Blog Article:** [Unveiling UnityLens: A Journey of Cultural Exchange](https://medium.com/@kosinick01/unveiling-unitylens-a-journey-of-cultural-exchange-5f594c03395d) (Link to your final project blog article)
-- **Author(s) LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/kosi-ugbala-3b50b6271/) (Link to your LinkedIn profile)
+- **Deployed Site:** [UnityLens](https://unitylens.site)
+- **Final Project Blog Article:** [Unveiling UnityLens: A Journey of Cultural Exchange](https://medium.com/@kosinick01/unveiling-unitylens-a-journey-of-cultural-exchange-5f594c03395d)
+- **Author(s) LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/kosi-ugbala-3b50b6271/)
 
 ## Usage
 
